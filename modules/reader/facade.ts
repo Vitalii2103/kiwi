@@ -20,11 +20,11 @@ async function createCsvFromStream(stream: Stream): Promise<{
 }[]> {
   const data = await getStreamData(stream);
   const rows = [];
-  const lines = data.trim().split("\n");
+  const lines = data.trim().split("\n").map((e: string) => e.trim());
 
   let started = false;
   for(let line of lines) {
-    if (line.trim() === '') {
+    if (line === '') {
       if (rows.length === 0) {
         started = true;
         continue;
@@ -38,7 +38,7 @@ async function createCsvFromStream(stream: Stream): Promise<{
     }
   }
 
-  const keys = rows[0].split(',').map(e => e.toLowerCase().trim());
+  const keys = rows[0].split(',').map((e: string) => e.trim().toLowerCase());
   const raw = rows.join("\n").trim();
   const csv = [];
   const items = (function parseRawCsv() {
@@ -97,6 +97,9 @@ module.exports = () => {
       switch (command){
         case ReaderCommand.CSV_FROM_STREAM:
           return await createCsvFromStream(args as Stream);
+        case ReaderCommand.GET_STREAM_DATA:
+          return getStreamData(args as Stream)
+        default: return null;
       }
     }
   } as ModuleFacadeDto;

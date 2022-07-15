@@ -1,7 +1,7 @@
 import {ModuleDto} from "../index.dto";
 const facade = require('./facade')
 
-module .exports = {
+module.exports = {
   async initialize() {
     return facade();
   }
