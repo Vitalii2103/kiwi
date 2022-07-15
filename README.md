@@ -12,6 +12,9 @@ To run application please use script `npm run start`. Please check log, `Applica
 For test `graphql` requests, open `http://localhost:4000/api` (port `4000` is default port from `.env`. You can specify your own port and use instead of default).
 To import data from `CSV` to database go to `http://localhost:4000/csv` and use form. You can find `CSV` example file on `/__mocks__/users.csv`. After the form sended, alert communicator will inform you about status. If all work fine you will see `DONE!` message.
 
+# Browsers
+File importer tested with latest `Google Chrome` and latest `Safari` browsers.
+
 # Examples
 GraphQL example query:
 ```
