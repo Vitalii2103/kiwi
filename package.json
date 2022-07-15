@@ -1,0 +1,38 @@
+{
+  "name": "kiwi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node app.ts",
+    "migrate": "node node_modules/db-migrate/bin/db-migrate up",
+    "migrate:rollback": "node node_modules/db-migrate/bin/db-migrate down",
+    "migration:create": "node node_modules/db-migrate/bin/db-migrate create $1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitalii2103/kiwi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitalii2103/kiwi/issues"
+  },
+  "homepage": "https://github.com/Vitalii2103/kiwi#readme",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.4",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}

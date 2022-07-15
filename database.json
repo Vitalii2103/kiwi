@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "driver": "pg",
+    "user": { "ENV": "DB_USER" },
+    "host": { "ENV": "DB_HOST" },
+    "database": { "ENV": "DB_NAME" },
+    "port": { "ENV": "5432" },
+    "schema": "migrations"
+  }
+}
