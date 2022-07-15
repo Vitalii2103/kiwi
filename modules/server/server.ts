@@ -17,8 +17,6 @@ app.use('/api', graphqlHTTP({ schema, rootValue, graphiql }));
 
 // Render HTML form from CSV importing
 app.get('/csv', async (req: Request, res: Response) => {
-  const body = req.body;
-  console.log(body);
   await AppProvider.facade('view').execute(VIEW_COMMANDS.RENDER, res, VIEW_TEMPLATES.CSV);
 });
 
