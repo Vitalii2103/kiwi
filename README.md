@@ -1,5 +1,5 @@
 # Installation
-Run `npm i` inside project folder. Project created and tested with `npm v8.13.2` and `node v18.6.0`.
+Run `npm i` inside project folder. Project created and tested using `npm v8.13.2` and `node v18.6.0`.
 
 # Database
 Create Postgress DB and set up connection data on `.env`. Default DB name is `kiwi`.
